@@ -12,10 +12,10 @@ tempCel <- (tempFah-32)/1.8
 Escreval ("A temperatura em Celsius é:")
 Escreval (tempCel:1:2)
 
-se tempCel < 15 entao
+se tempCel <= 15 entao
    Escreval ("A temperatura está fria")
 senao
-   se tempCel <  28 entao
+   se tempCel <=  28 entao
       Escreval ("A temperatura está agradavel")
    senao
       Escreval ("A temperatura está quente")
