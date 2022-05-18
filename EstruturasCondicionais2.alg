@@ -13,14 +13,14 @@ leia(nota2)
 Escreval("Por favor, informe a terceira nota: ")
 leia(nota3)
 media <- (nota1+nota2+nota3)/3
-Escreval(media)
+Escreval(media:1:2)
 se media >= 7 entao
-   Escreval ("Voce foi aprovado com a nota: ", media)
+   Escreval ("Voce foi aprovado com a nota: ", media:1:2)
 senao
    se media < 6 entao
-      Escreval ("Você ficou reprovado com a nota: ", media)
+      Escreval ("Você ficou reprovado com a nota: ", media:1:2)
    senao
-      Escreval ("Você ficou em dependencia com a nota: ", media)
+      Escreval ("Você ficou em dependencia com a nota: ", media:1:2)
    fimse
 fimse
 fimalgoritmo
