@@ -15,11 +15,11 @@ leia(pmais)
 escreval("Escreva o numero do desacrescimo da contagem: ")
 leia(pmenos)
 para n de i ate f passo pmais faca
-      escreval(n)
+   escreval(n)
 fimpara
 escreval("")
 para n de f ate i passo -pmenos faca
-      escreval(n)
+   escreval(n)
 fimpara
 
 fimalgoritmo
