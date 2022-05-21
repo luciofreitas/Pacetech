@@ -30,9 +30,7 @@ senao
             se (imc >= 35) e (imc <= 39.9) entao
                escreval ("Voce está com obesidade grau II")
             senao
-               se imc >= 40 entao
-                  escreval ("Voce está com obesidade grau III ou mórbida")
-               fimse
+               escreval ("Voce está com obesidade grau III ou mórbida")
             fimse
          fimse
       fimse
