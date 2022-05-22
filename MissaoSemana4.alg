@@ -91,6 +91,38 @@ caso = "3"
    leia(mConversao)
    mReal <- mReal / mConversao
    escreval("O valor em dolar é: ", mReal:1:2)
+   repita
+      escreval("")
+      escreval("")
+      escreval("")
+      escreval("1 - Para realizar outro tipo de conversao das moedas")
+      escreval("2 - Sair")
+      leia(opcaoMenu2)
+      limpatela
+      escolha opcaoMenu2
+      caso = "1"
+         escreval("1 - Converter Moeda para Real")
+         escreval("2 - Converter Moeda para Dollar")
+         leia(opcaoMenu3)
+         escolha opcaoMenu3
+         caso = "1"
+            escreval("Escreva o valor em Dollar: ")
+            leia(mDolar)
+            escreval("Informe o valor da cotação: ")
+            leia(mConversao)
+            mDolar <- mDolar * mConversao
+            limpatela
+            escreval("O valor em Dollar é: ",mDolar:1:2)
+         caso = "2"
+            escreval("Escreva o valor em Real: ")
+            leia(mReal)
+            escreval("Informe o valor da cotação: ")
+            leia(mConversao)
+            mReal <- mReal / mConversao
+            escreval("O valor em dolar é: ", mReal:1:2)
+         fimescolha
+      fimescolha
+   ate opcaoMenu2 = "2"
 caso = "4"
    escreval("Informe o valor da moeda em dolar desejado para que seja convertido em real: ")
    leia(mDolar)
