@@ -27,7 +27,7 @@ repita
       leia(poltrona)
       
       se   cinema[fila,poltrona] = "0" entao
-         cinema[fila,poltrona] = "X"
+         cinema[fila,poltrona] <- "X"
       senao
          escreval("Poltrona ja ocupada")
       fimse
