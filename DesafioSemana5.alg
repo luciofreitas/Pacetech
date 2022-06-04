@@ -4,15 +4,15 @@ var
 
 opcao: literal
 i,j:inteiro
-vC,vF,conversao: vetor[1..4] de real
-vH: vetor[1..4] de inteiro
+vCelsius,vFahrenheit,conversao: vetor[1..4] de real
+vHora: vetor[1..4] de inteiro
 auxHora: inteiro
 auxTemp, auxConversao: real
 
 
 //---------------------------
 
-procedimento CparaF
+procedimento CelsiusToFahrenheit
 
 inicio
 
@@ -20,28 +20,28 @@ inicio
 para i de 1 ate 4 faca
 
    Escreval("Informe a temperatura em Celsius")
-   leia(vC[i])
+   leia(vCelsius[i])
 
-   conversao[i] <- (vC[i]*1.8)+32
+   conversao[i] <- (vCelsius[i]*1.8)+32
 
    limpatela
 
    Escreval("Informe a hora da temperatura informada anteriormente")
-   leia(vH[i])
+   leia(vHora[i])
 
    limpatela
 
 
    para j de 1 ate 4 faca
       se vC[j] > vC[i] entao
-         auxTemp <- vC[i]
-         auxHora <- vH[i]
+         auxTemp <- vCelsius[i]
+         auxHora <- vHora[i]
          auxConversao <- conversao[i]
-         vC[i] <- vC[j]
-         vH[i] <- vH[j]
+         vCelsius[i] <- vCelsius[j]
+         vHora[i] <- vHora[j]
          conversao[i] <- conversao[j]
-         vC[j] <- auxTemp
-         vH[j] <- auxHora
+         vCelsius[j] <- auxTemp
+         vHora[j] <- auxHora
          conversao[j] <- auxConversao
       fimse
    fimpara
@@ -49,12 +49,12 @@ fimpara
 
 para i de 1 ate 4 faca
 
-   Escreval ("A temperatura em Celsius é: ",vC[i],"ºC, registrada as ", vH[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"F")
+   Escreval ("A temperatura em Celsius é: ",vCelsius[i],"ºC, registrada as ", vHora[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"F")
 fimpara
 
 fimprocedimento
 
-procedimento FparaC
+procedimento FahrenheitToCelsius
 
 inicio
 
@@ -62,28 +62,28 @@ inicio
 para i de 1 ate 4 faca
 
    Escreval("Informe a temperatura em Fahrenheit")
-   leia(vF[i])
+   leia(vFahrenheit[i])
 
-   conversao[i] <- (vF[i]-32) / 1.8
+   conversao[i] <- (vFahrenheit[i]-32) / 1.8
 
    limpatela
 
    Escreval("Informe a hora da temperatura informada anteriormente")
-   leia(vH[i])
+   leia(vHora[i])
 
    limpatela
 
 
    para j de 1 ate 4 faca
-      se vF[j] > vF[i] entao
-         auxTemp <- vF[i]
-         auxHora <- vH[i]
+      se vFahrenheit[j] > vFahrenheit[i] entao
+         auxTemp <- vFahrenheit[i]
+         auxHora <- vHora[i]
          auxConversao <- conversao[i]
-         vF[i] <- vF[j]
-         vH[i] <- vH[j]
+         vFahrenheit[i] <- vFahrenheit[j]
+         vHora[i] <- vHora[j]
          conversao[i] <- conversao[j]
-         vF[j] <- auxTemp
-         vH[j] <- auxHora
+         vFahrenheit[j] <- auxTemp
+         vHora[j] <- auxHora
          conversao[j] <- auxConversao
       fimse
    fimpara
@@ -91,11 +91,20 @@ fimpara
 
 para i de 1 ate 4 faca
 
-   Escreval ("A temperatura em Fahrenheit é: ",vF[i],"ºF, registrada as ", vH[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"ºC")
+   Escreval ("A temperatura em Fahrenheit é: ",vFahrenheit[i],"ºF, registrada as ", vHora[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"ºC")
 fimpara
 
 fimprocedimento
+procedimento exibirMenu
+inicio
+Escreval("Qual conversão você deseja fazer?")
+   Escreval("")
+   Escreval("1 - Conversão de fahrenheit para Celsius")
+   Escreval("2 - Conversão de Celsius para fahrenheit")
+   Escreval("3 - sair")
+   leia(opcao)
 
+fimprocedimento
 
 
 //---------------------------
@@ -104,23 +113,18 @@ inicio
 
 repita
 
-   Escreval("Qual conversão você deseja fazer?")
-   Escreval("")
-   Escreval("1 - Conversão de fahrenheit para Celsius")
-   Escreval("2 - Conversão de Celsius para fahrenheit")
-   Escreval("3 - sair")
-   leia(opcao)
+   exibirMenu
 
 
    escolha opcao
 
    caso "1"
 
-      CparaF
+      CelsiusToFahrenheit
 
    caso "2"
 
-      FparaC
+      FahrenheitToCelsius
 
    caso "3"
 
