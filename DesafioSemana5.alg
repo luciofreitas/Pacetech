@@ -1,7 +1,5 @@
 algoritmo "DesafioSemana5"
 
-
-
 var
 
 opcao: literal
@@ -93,7 +91,7 @@ fimpara
 
 para i de 1 ate 4 faca
 
-   Escreval ("A temperatura em Fahrenheit é: ",vF[i],"ºC, registrada as ", vH[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"F")
+   Escreval ("A temperatura em Fahrenheit é: ",vF[i],"ºF, registrada as ", vH[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"ºC")
 fimpara
 
 fimprocedimento
