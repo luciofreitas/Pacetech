@@ -19,45 +19,86 @@ procedimento CparaF
 inicio
 
 
-      para i de 1 ate 4 faca
+para i de 1 ate 4 faca
 
-         Escreval("Informe a temperatura em Celsius")
-         leia(vC[i])
+   Escreval("Informe a temperatura em Celsius")
+   leia(vC[i])
 
-         conversao[i] <- (vC[i]*1.8)+32
+   conversao[i] <- (vC[i]*1.8)+32
 
-         limpatela
+   limpatela
 
-         Escreval("Informe a hora da temperatura informada anteriormente")
-         leia(vH[i])
+   Escreval("Informe a hora da temperatura informada anteriormente")
+   leia(vH[i])
 
-         limpatela
+   limpatela
 
 
-         para j de 1 ate 4 faca
-            se vC[j] > vC[i] entao
-               auxTemp <- vC[i]
-               auxHora <- vH[i]
-               auxConversao <- conversao[i]
-               vC[i] <- vC[j]
-               vH[i] <- vH[j]
-               conversao[i] <- conversao[j]
-               vC[j] <- auxTemp
-               vH[j] <- auxHora
-               conversao[j] <- auxConversao
-            fimse
-         fimpara
-      fimpara
+   para j de 1 ate 4 faca
+      se vC[j] > vC[i] entao
+         auxTemp <- vC[i]
+         auxHora <- vH[i]
+         auxConversao <- conversao[i]
+         vC[i] <- vC[j]
+         vH[i] <- vH[j]
+         conversao[i] <- conversao[j]
+         vC[j] <- auxTemp
+         vH[j] <- auxHora
+         conversao[j] <- auxConversao
+      fimse
+   fimpara
+fimpara
 
-      para i de 1 ate 4 faca
+para i de 1 ate 4 faca
 
-      Escreval ("A temperatura em Celsius é: ",vC[i],"ºC, registrada as ", vH[i], ":00 Horas, correspondem a ", conversao[i],"F")
-      fimpara
-
-   fimescolha
-
+   Escreval ("A temperatura em Celsius é: ",vC[i],"ºC, registrada as ", vH[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"F")
+fimpara
 
 fimprocedimento
+
+procedimento FparaC
+
+inicio
+
+
+para i de 1 ate 4 faca
+
+   Escreval("Informe a temperatura em Fahrenheit")
+   leia(vF[i])
+
+   conversao[i] <- (vF[i]-32) / 1.8
+
+   limpatela
+
+   Escreval("Informe a hora da temperatura informada anteriormente")
+   leia(vH[i])
+
+   limpatela
+
+
+   para j de 1 ate 4 faca
+      se vF[j] > vF[i] entao
+         auxTemp <- vF[i]
+         auxHora <- vH[i]
+         auxConversao <- conversao[i]
+         vF[i] <- vF[j]
+         vH[i] <- vH[j]
+         conversao[i] <- conversao[j]
+         vF[j] <- auxTemp
+         vH[j] <- auxHora
+         conversao[j] <- auxConversao
+      fimse
+   fimpara
+fimpara
+
+para i de 1 ate 4 faca
+
+   Escreval ("A temperatura em Fahrenheit é: ",vF[i],"ºC, registrada as ", vH[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"F")
+fimpara
+
+fimprocedimento
+
+
 
 //---------------------------
 
@@ -77,9 +118,19 @@ repita
 
    caso "1"
 
-   CparaF
+      CparaF
 
-  fimescolha
+   caso "2"
+
+      FparaC
+
+   caso "3"
+
+   outrocaso
+      escreval("Opção Invalida")
+
+
+   fimescolha
 
 ate opcao = "3"
 
