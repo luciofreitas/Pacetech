@@ -32,7 +32,7 @@ public class Main {
                                 System.out.print("Por favor, informe o valor em Celsius"
                                         + " que deseja converter: ");
                                 tempCelsius = leitor.nextFloat();
-                                cFahrenheit = (tempCelsius * (9 / 5)) + 32;
+                                cFahrenheit = (tempCelsius * 9 / 5) + 32;
                                 System.out.println("A temperatura em Celsius " + tempCelsius
                                         + " ºC convertida em Fahrenheit é: " + String.format("%.2f", cFahrenheit) + " ºF");
                             }
@@ -41,7 +41,7 @@ public class Main {
                                 System.out.print("Por favor, informe o valor em Fahrenheit"
                                         + " que deseja converter: ");
                                 tempFahrenheit = leitor.nextFloat();
-                                cCelsius = (tempFahrenheit - 32) / (9 / 5);
+                                cCelsius = (tempFahrenheit - 32) * 9 / 5;
                                 System.out.println("A temperatura em Fahrenheit " + tempFahrenheit
                                         + " ºF convertida em Celsius eh: " + String.format("%.2f", cCelsius) + " ºC");
                             }
