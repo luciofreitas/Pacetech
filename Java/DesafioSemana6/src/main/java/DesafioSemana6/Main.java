@@ -26,24 +26,29 @@ public class Main {
                         System.out.println("1 - Converter Celsius para Fahrenheit");
                         System.out.println("2 - Converter Fahrenheit para Celsius");
                         System.out.println("3 - Voltar ao menu anterior");
+                        System.out.println("");
                         menu2 = leitor.nextInt();
                         switch (menu2) {
                             case 1 -> {
                                 System.out.print("Por favor, informe o valor em Celsius"
                                         + " que deseja converter: ");
+                                System.out.println("");
                                 tempCelsius = leitor.nextFloat();
                                 cFahrenheit = (tempCelsius * 9 / 5) + 32;
                                 System.out.println("A temperatura em Celsius " + tempCelsius
                                         + " ºC convertida em Fahrenheit é: " + String.format("%.2f", cFahrenheit) + " ºF");
+                                System.out.println("");
                             }
 
                             case 2 -> {
                                 System.out.print("Por favor, informe o valor em Fahrenheit"
                                         + " que deseja converter: ");
+                                System.out.println("");
                                 tempFahrenheit = leitor.nextFloat();
                                 cCelsius = (tempFahrenheit - 32) * 9 / 5;
                                 System.out.println("A temperatura em Fahrenheit " + tempFahrenheit
                                         + " ºF convertida em Celsius eh: " + String.format("%.2f", cCelsius) + " ºC");
+                                System.out.println("");
                             }
                             case 3 -> {
                             }
@@ -58,30 +63,37 @@ public class Main {
                         System.out.println("1 - Converter Dolar para Real");
                         System.out.println("2 - Converter Real para Dolar");
                         System.out.println("3 - Voltar ao menu anterior");
+                        System.out.println("");
                         menu3 = leitor.nextInt();
                         switch (menu3) {
                             case 1 -> {
                                 System.out.print("Por favor, informe o valor da cotacao "
                                         + " desejada: ");
+                                System.out.println("");
                                 mCotacao = leitor.nextFloat();
 
                                 System.out.print("Por favor, informe o valor em real "
                                         + "que deseja para que seja convertido em dolar: ");
+                                System.out.println("");
                                 mReal = leitor.nextFloat();
                                 mDolar = mReal / mCotacao;
                                 System.out.println("O valor em dolar eh: $ " + String.format("%.2f", mDolar));
+                                System.out.println("");
                             }
 
                             case 2 -> {
                                 System.out.print("Por favor, informe o valor da cotacao "
                                         + " desejada: ");
+                                System.out.println("");
                                 mCotacao = leitor.nextFloat();
                                 System.out.print("Por favor, informe o valor em dolar "
                                         + "que deseja para que seja convertido em real: ");
+                                System.out.println("");
                                 mDolar = leitor.nextFloat();
 
                                 mReal = mDolar * mCotacao;
                                 System.out.println("O valor em real eh R$: " + String.format("%.2f", mReal));
+                                System.out.println("");
                             }
                             case 3 -> {
                             }

@@ -1,4 +1,2 @@
 DesafioSemana6/Main.java
  DesafioSemana6.Main
-DesafioSemana6/Principal.java
- DesafioSemana6.Principal
