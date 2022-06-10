@@ -34,7 +34,7 @@ public class Main {
                                 tempCelsius = leitor.nextFloat();
                                 cFahrenheit = (tempCelsius * (9 / 5)) + 32;
                                 System.out.println("A temperatura em Celsius " + tempCelsius
-                                        + " ºC convertida em Fahrenheit é: " + cFahrenheit + " ºF");
+                                        + " ºC convertida em Fahrenheit é: " + String.format("%.2f", cFahrenheit) + " ºF");
                             }
 
                             case 2 -> {
@@ -43,7 +43,7 @@ public class Main {
                                 tempFahrenheit = leitor.nextFloat();
                                 cCelsius = (tempFahrenheit - 32) / (9 / 5);
                                 System.out.println("A temperatura em Fahrenheit " + tempFahrenheit
-                                        + " ºF convertida em Celsius eh: " + cCelsius + " ºC");
+                                        + " ºF convertida em Celsius eh: " + String.format("%.2f", cCelsius) + " ºC");
                             }
                             case 3 -> {
                             }
@@ -69,7 +69,7 @@ public class Main {
                                         + "que deseja para que seja convertido em dolar: ");
                                 mReal = leitor.nextFloat();
                                 mDolar = mReal / mCotacao;
-                                System.out.println("O valor em dolar eh: $ " + mDolar);
+                                System.out.println("O valor em dolar eh: $ " + String.format("%.2f", mDolar));
                             }
 
                             case 2 -> {
@@ -81,7 +81,7 @@ public class Main {
                                 mDolar = leitor.nextFloat();
 
                                 mReal = mDolar * mCotacao;
-                                System.out.println("O valor em real eh R$: " + mReal);
+                                System.out.println("O valor em real eh R$: " + String.format("%.2f", mReal));
                             }
                             case 3 -> {
                             }
