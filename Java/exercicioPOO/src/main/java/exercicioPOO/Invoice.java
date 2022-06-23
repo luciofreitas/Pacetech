@@ -6,7 +6,7 @@ public class Invoice {
     private String descItem;
     private double precoItem;
 
-    public Invoice(int nItemFaturado, int qntdComprada, String descItem, double precoItem) {
+    public Invoice(int nItemFaturado,String descItem, int qntdComprada, double precoItem) {
         this.setnItemFaturado(nItemFaturado);
         this.setDescItem(descItem);
         this.setQntdComprada(qntdComprada);
