@@ -18,7 +18,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }
 
     String op;
-    int n1, n2, res;
+    Double n1, n2, res;
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -320,19 +320,19 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_apagarActionPerformed
 
     private void divisãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisãoActionPerformed
-        n1 = Integer.parseInt(tela.getText());
+        n1 = Double.parseDouble(tela.getText());
         op = "divisão";
         tela.setText("");
     }//GEN-LAST:event_divisãoActionPerformed
 
     private void multiplicaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicaçãoActionPerformed
-        n1 = Integer.parseInt(tela.getText());
+        n1 = Double.parseDouble(tela.getText());
         op = "multiplicação";
         tela.setText("");
     }//GEN-LAST:event_multiplicaçãoActionPerformed
 
     private void subtraçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtraçãoActionPerformed
-        n1 = Integer.parseInt(tela.getText());
+        n1 = Double.parseDouble(tela.getText());
         op = "subtração";
         tela.setText("");
     }//GEN-LAST:event_subtraçãoActionPerformed
@@ -378,28 +378,28 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_umActionPerformed
 
     private void somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_somaActionPerformed
-        n1 = Integer.parseInt(tela.getText());
+        n1 = Double.parseDouble(tela.getText());
         op = "soma";
         tela.setText("");
     }//GEN-LAST:event_somaActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
-        n2 = Integer.parseInt(tela.getText());
+        n2 = Double.parseDouble(tela.getText());
         if (op.equals("soma")) {
             res = n1 + n2;
-            tela.setText(Integer.toString(res));
+            tela.setText(Double.toString(res));
         }
         if (op.equals("subtração")) {
             res = n1 - n2;
-            tela.setText(Integer.toString(res));
+            tela.setText(Double.toString(res));
         }
         if(op.equals("multiplicação")){
             res = n1 * n2;
-            tela.setText(Integer.toString(res));
+            tela.setText(Double.toString(res));
         }
         if(op.equals("divisão")){
             res = n1/n2;
-            tela.setText(Integer.toString(res));
+            tela.setText(Double.toString(res));
         }
     }//GEN-LAST:event_igualActionPerformed
 
