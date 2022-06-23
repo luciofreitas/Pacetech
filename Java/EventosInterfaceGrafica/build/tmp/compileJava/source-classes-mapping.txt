@@ -1,0 +1,6 @@
+EventosInterfaceGrafica/Main.java
+ EventosInterfaceGrafica.Main
+EventosInterfaceGrafica/MinhaTela.java
+ EventosInterfaceGrafica.MinhaTela
+ EventosInterfaceGrafica.MinhaTela$1
+ EventosInterfaceGrafica.MinhaTela$2
