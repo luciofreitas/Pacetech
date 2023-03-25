@@ -33,7 +33,7 @@ para i de 1 ate 4 faca
 
 
    para j de 1 ate 4 faca
-      se vC[j] > vC[i] entao
+      se vCelsius[j] > vCelsius[i] entao
          auxTemp <- vCelsius[i]
          auxHora <- vHora[i]
          auxConversao <- conversao[i]
@@ -49,7 +49,7 @@ fimpara
 
 para i de 1 ate 4 faca
 
-   Escreval ("A temperatura em Celsius é: ",vCelsius[i],"ºC, registrada as ", vHora[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"F")
+   Escreval ("A temperatura em Celsius Ã©: ",vCelsius[i],"ÂºC, registrada as ", vHora[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"F")
 fimpara
 
 fimprocedimento
@@ -91,16 +91,16 @@ fimpara
 
 para i de 1 ate 4 faca
 
-   Escreval ("A temperatura em Fahrenheit é: ",vFahrenheit[i],"ºF, registrada as ", vHora[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"ºC")
+   Escreval ("A temperatura em Fahrenheit Ã©: ",vFahrenheit[i],"ÂºF, registrada as ", vHora[i], ":00 Horas, correspondem a ", conversao[i]:1:2,"ÂºC")
 fimpara
 
 fimprocedimento
 procedimento exibirMenu
 inicio
-Escreval("Qual conversão você deseja fazer?")
+Escreval("Qual conversÃ£o vocÃª deseja fazer?")
    Escreval("")
-   Escreval("1 - Conversão de fahrenheit para Celsius")
-   Escreval("2 - Conversão de Celsius para fahrenheit")
+   Escreval("1 - ConversÃ£o de fahrenheit para Celsius")
+   Escreval("2 - ConversÃ£o de Celsius para fahrenheit")
    Escreval("3 - sair")
    leia(opcao)
 
@@ -129,7 +129,7 @@ repita
    caso "3"
 
    outrocaso
-      escreval("Opção Invalida")
+      escreval("OpÃ§Ã£o Invalida")
 
 
    fimescolha
