@@ -21,7 +21,7 @@ public class Main {
             System.out.println("");
             menu = leitor.nextInt();
             switch (menu) {
-                case 1 -> {
+                case 1: {
                     do {
                         System.out.println("1 - Converter Celsius para Fahrenheit");
                         System.out.println("2 - Converter Fahrenheit para Celsius");
@@ -29,36 +29,40 @@ public class Main {
                         System.out.println("");
                         menu2 = leitor.nextInt();
                         switch (menu2) {
-                            case 1 -> {
+                            case 1: {
                                 System.out.print("Por favor, informe o valor em Celsius"
                                         + " que deseja converter: ");
                                 System.out.println("");
                                 tempCelsius = leitor.nextFloat();
                                 cFahrenheit = (tempCelsius * 9 / 5) + 32;
                                 System.out.println("A temperatura em Celsius " + tempCelsius
-                                        + " ºC convertida em Fahrenheit é: " + String.format("%.2f", cFahrenheit) + " ºF");
+                                        + " ÂºC convertida em Fahrenheit Ã©: " + String.format("%.2f", cFahrenheit) + " ÂºF");
                                 System.out.println("");
+                                break;
                             }
 
-                            case 2 -> {
+                            case 2: {
                                 System.out.print("Por favor, informe o valor em Fahrenheit"
                                         + " que deseja converter: ");
                                 System.out.println("");
                                 tempFahrenheit = leitor.nextFloat();
                                 cCelsius = (tempFahrenheit - 32) * 9 / 5;
                                 System.out.println("A temperatura em Fahrenheit " + tempFahrenheit
-                                        + " ºF convertida em Celsius eh: " + String.format("%.2f", cCelsius) + " ºC");
+                                        + " ÂºF convertida em Celsius eh: " + String.format("%.2f", cCelsius) + " ÂºC");
                                 System.out.println("");
+                                break;
                             }
-                            case 3 -> {
+                            case 3: {
                             }
 
-                            default ->
+                            default:
                                 System.out.println("Opcao Invalida");
+                                break;
                         }
                     } while (menu2 != 3);
                 }
-                case 2 -> {
+                break;
+                case 2: {
                     do {
                         System.out.println("1 - Converter Dolar para Real");
                         System.out.println("2 - Converter Real para Dolar");
@@ -66,7 +70,7 @@ public class Main {
                         System.out.println("");
                         menu3 = leitor.nextInt();
                         switch (menu3) {
-                            case 1 -> {
+                            case 1: {
                                 System.out.print("Por favor, informe o valor da cotacao "
                                         + " desejada: ");
                                 System.out.println("");
@@ -80,8 +84,9 @@ public class Main {
                                 System.out.println("O valor em dolar eh: $ " + String.format("%.2f", mDolar));
                                 System.out.println("");
                             }
+                            break;
 
-                            case 2 -> {
+                            case 2: {
                                 System.out.print("Por favor, informe o valor da cotacao "
                                         + " desejada: ");
                                 System.out.println("");
@@ -94,20 +99,25 @@ public class Main {
                                 mReal = mDolar * mCotacao;
                                 System.out.println("O valor em real eh R$: " + String.format("%.2f", mReal));
                                 System.out.println("");
+                                break;
                             }
-                            case 3 -> {
+                            case 3: {
                             }
 
-                            default ->
+                            default: 
                                 System.out.println("Opcao Invalida");
+                                break;
                         }
+                    
                     } while (menu3 != 3);
+                break;
                 }
-                case 3 -> {
+                case 3:  {
                 }
 
-                default ->
+                default: 
                     System.out.println("Opcao Invalida");
+                    break;
 
             }
         } while (menu != 3);
